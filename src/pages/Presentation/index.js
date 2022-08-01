@@ -64,22 +64,35 @@ function Presentation() {
         minHeight="100vh"
         width="100%"
         color="black"
-        bgColor="info"
-        variant="gradient"
+        // bgColor="info"
+        // variant="gradient"
         borderRadius="lg"
         shadow="lg"
+        coloredShadow="dark"
+        // backgroundColor="red"
+        // backgroundImage=
         opacity={0.5}
         p={2}
         sx={{
-          backgroundImage: `url(${bgImage})`,
-          
-         
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            `${linearGradient(
+              rgba(gradients.dark.main, 0.5),
+              rgba(gradients.dark.state, 0.8)
+            )}, url(${bgImage})`,
           backgroundSize: "cover",
-
           backgroundPosition: "top",
           display: "grid",
           placeItems: "center",
+          // backgroundPosition: "top",
         }}
+        // sx={{
+        //   backgroundImage: `url(${bgImage})`,
+        //   backgroundSize: "cover",
+
+        //   backgroundPosition: "top",
+        //   display: "grid",
+        //   placeItems: "center",
+        // }}
       >
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">

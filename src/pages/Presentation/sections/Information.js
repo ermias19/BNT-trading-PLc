@@ -34,7 +34,7 @@ import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 import OpacityOutlinedIcon from '@mui/icons-material/OpacityOutlined';
 function Information() {
   return (
-    <MKBox component="section" py={6} my={6}>
+    <MKBox component="section" py={10} my={10}>
       <Container>
         <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={6} sx={{ mx: "auto" }}>
@@ -53,6 +53,7 @@ function Information() {
               />
               <RotatingCardBack
                 image={bgBack}
+                // height="12"
                 title="Discover More"
                 description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
